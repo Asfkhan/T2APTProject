@@ -1,0 +1,30 @@
+[{
+        "id": 1,
+        "gender": "Male",
+        "name": "John",
+        "age": 25,
+        "address": "New York"
+    },
+    {
+        "id": 2,
+        "gender": "Female",
+        "name": "Jane",
+        "age": 30,
+        "address": "India"
+
+    },
+    {
+        "id": 3,
+        "gender": "Male",
+        "name": "Bob",
+        "age": 35,
+        "address": "Italy"
+    },
+    {
+        "id": 4,
+        "gender": "Male",
+        "name": "Mike",
+        "age": 35,
+        "address": "USA"
+    }
+]

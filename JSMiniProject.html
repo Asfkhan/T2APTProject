@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AptechProject</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+
+    
+
+    <script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+</head>
+
+<body ng-app="MyApp" ng-controller="MyController">
+    <header>
+        <div>
+            <marquee behavior="alternate" direction="right" scrollamount="10" >
+                    
+                <span class="circle">
+                    <span class="profile">
+                        <strong class="profile_image" style="color: #f6be00;">Aptech<br>
+                            <span style="color: white;">Learning</span>
+                        </strong>
+                        <!-- <img src="/Images/aptechlogo.png" alt="no img" width="60px" height="60px" id="logo" class="profile_image"> -->
+                    </span>
+                    <span class="profiletext">
+                        <p class="personalPtag"><span>Unleash Your Potential!</span></p>
+                    </span>
+                </span>
+                <b>Python Development 🐾</b>
+            </marquee>
+            <marquee behavior="alternate" direction="left" scrollamount="10">
+                <caption style="color: white;">Based Assignments</caption>
+            </marquee>
+        </div>
+        
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><button ng-click="selectTab(1)" class="currentTab">Python</button></li>
+                <li><button ng-click="selectTab(2)" class="currentTab">HTML5/CSS</button></li>
+                <li><button ng-click="selectTab(3)" class="currentTab">JavaScript</button></li>
+                <li><button ng-click="selectTab(4)" class="currentTab">Jquery</button></li>
+                <li><button ng-click="selectTab(5)" class="currentTab">AngularJS</button></li>
+                <li><button ng-click="selectTab(6)" class="currentTab">MYSql</button></li>
+                <li><button ng-click="selectTab(7)" class="currentTab">Group Project</button></li>
+            </ul>
+        </nav>
+
+        <article>
+            <center>
+                <div class="tab-content" ng-class="{ active: selectedTab === 1 }">
+                    <div id="pythontabs">
+
+                            <ul>
+                                <li><a class="pythonanchor" href="#UserDefinedFunction"><span
+                                            class="pythonSpanID">UserDefinedFunction</span></a></li>
+                                <li><a class="pythonanchor" href="#whileloop"><span
+                                            class="pythonSpanID">whileloop</span></a>
+                                </li>
+                                <li><a class="pythonanchor" href="#forloop"><span class="pythonSpanID">forloop</span></a>
+                                </li>
+                                <li><a class="pythonanchor" href="#list"><span class="pythonSpanID">List</span></a></li>
+                                <li><a class="pythonanchor" href="#oops"><span class="pythonSpanID">OOPS</span></a></li>
+                                <li><a class="pythonanchor" href="#dictionary"><span
+                                            class="pythonSpanID">Dictionary</span></a>
+                                </li>
+                                <li><a class="pythonanchor" href="#lambdafunction"><span class="pythonSpanID">Lambda
+                                            Funtion</span></a></li>
+
+                                <li><a class="pythonanchor" href="#listcomprehension"><span class="pythonSpanID">List
+                                            Comprehension</span></a></li>
+
+
+
+                                <li><a class="pythonanchor" href="#mfrfuntion"><span class="pythonSpanID">MFR
+                                            Function</span></a></li>
+
+                                <li><a class="pythonanchor" href="#fileHandling"><span class="pythonSpanID">
+                                            File Handling</span></a></li>
+
+                                <li><a class="pythonanchor" href="#taskGiven"><span class="pythonSpanID">Task
+                                            Given</span></a></li>
+
+                            </ul>
+                            <div id="UserDefinedFunction">
+                                <p>
+                                    <a href="assignments\Function\functionNotes.pdf">View Assignment</a>
+                                </p>
+                                <h1>Calculator</h1><br>
+                                <form>
+                                    <input type="number" ng-model="no1">
+                                    <input type="number" ng-model="no2">
+                                    <button type="button" ng-click="addkrdo()">ADD</button>
+                                    <button type="button" ng-click="subkrdo()">SUB</button>
+                                    <button type="button" ng-click="multikrdo()">MUL</button>
+                                    <button type="button" ng-click="divkrdo()">DIV</button>
+                                </form>
+                                <div>
+                                    <pre>{{calcresult}}</pre>
+                                </div>
+                                <button type="button" ng-click="age()"> Check ELigibility</button>
+                                <pre>{{eligibResult}}</pre>
+                            </div>
+                            <div id="whileloop">
+
+                                <p>
+                                    <a href="assignments\WhileLoop\whileLoop.pdf">View Assignment</a>
+                                </p>
+                                <input type="number" ng-model="tableinput">
+                                <button type="button" ng-click="WLFTable()" id="tblebtn">Click Me To Get Table</button>
+                                <pre>{{tableResult}}</pre>
+                                <input type="number" ng-model="pspinput">
+                                <button type="button" ng-click="WLFPerfect()">Perfect Number</button>
+                                <button type="button" ng-click="WLFprime()">Prime Number</button>
+                                <button type="button" ng-click="WLFpalin()">Palin Number or Not</button>
+                                <button type="button" ng-click="WLFtwinprime()">Twin Prime Number or Not</button>
+                                <button type="button" ng-click="WLFreverse()">Reverse of Number</button>
+                                <button type="button" ng-click="WLFfactor()" id="facbtn">Factors</button>
+                                <button type="button" ng-click="WLFfactorial()">Factorial</button>
+                                <pre>{{pspoutput}}</pre>
+
+
+                            </div>
+                            <div id="forloop">
+                                <p>
+                                    <a href="assignments\ForLoop\forloopnotes.pdf">View Assignment</a>
+                                </p>
+                                <button type="button" ng-click="FLsna()">Click To Get Sum and Average Using For
+                                    Loop</button>
+                                <pre>{{FLoutput}}</pre>
+                            </div>
+                            <div id="list">
+                                <p>
+                                    <a href="assignments\ListQuestion\listNotes.pdf">View Assignment</a>
+                                </p>
+                                <strong>Q1. Create empty List append 5 number into list.</strong>
+                                <input type="number" ng-model="list_user_input" placeholder="enter value">
+                                <button type="button" ng-click="list_q1_output_btn()">Add</button>
+                                <p>Output : {{list_q1_result | json}}</p>
+                                <strong>Q2. Enter index number and element from user to insert number to the specified
+                                    index in
+                                    the
+                                    list.</strong>
+                                <input type="number" ng-model="list_user_x" placeholder="index number : ">
+                                <input type="number" ng-model="list_user_y" placeholder="element  : ">
+                                <button type="button" ng-click="list_q2_output_btn()">Show Output</button>
+                                <p>Output : {{list_q2_result}}</p>
+                                <strong>Q3.Create another list of five numbers and append all the numbers from list 2 to
+                                    list
+                                    one.</strong>
+                                <button type="button" ng-click="list_q3_output_btn()">Create and Append</button>
+                                <p>Output : {{list_q3_result}}</p>
+                                <strong>Q4. Display list with the step value two.</strong>
+                                <button type="button" ng-click="list_q4_output_btn()">Show List </button>
+                                <p>Output : {{list_q4_result}}</p>
+                                <strong>Q5. Display middle three element of list.</strong>
+                                <button type="button" ng-click="list_q5_output_btn()">Show List </button>
+                                <p>Output : {{list_q5_result}}</p>
+                            </div>
+                            <div id="oops">
+                                <strong>Q1. Create class furniture. using constructor initialize height, width
+                                    and color use display method display ().
+                                    Create another class chair which is inherited from furniture with the
+                                    attribute legs and use display method to display all attributes.</strong>
+                                <div>
+                                    <p>
+                                        <button type="button" ng-click="oops_q1_output_btn()">Show Class
+                                            Inheritance</button>
+                                    <p>Output : {{oops_q1_result}}</p>
+                                    <span ng-bind-html="oops_q1_result2"></span> <br> <br> <br> <br>
+                                    </p>
+                                </div>
+                                <strong>Q2. Create class rectangle, using constructor initialize length and
+                                    breadth find of rectangle using method.</strong>
+                                <div>
+                                    <p>
+                                        <button type="button" ng-click="oops_q2_output_btn()">Show Class
+                                            Inheritance</button>
+                                        <span ng-bind-html="oops_q2_result"></span> <br> <br> <br> <br>
+                                    </p>
+
+                                </div>
+                                <strong>3.Create class circle, using constructor initialize radius and find
+                                    area and perimeter of circle.</strong>
+                                <div>
+                                    <p>
+                                        <button type="button" ng-click="oops_q3_output_btn()">Show Class
+                                            Inheritance</button>
+                                        <span ng-bind-html="oops_q3_result"></span> <br> <br> <br> <br>
+                                    </p>
+                                </div>
+                                <strong>Q4. Create class the bank, using constructor take the values of account,
+                                    name and balance. Create method deposit (self, amt) with one parameter
+                                    amount to increase the balance, create another method withdraw (self,
+                                    amt) with one parameter to decrease the balance. Create method Statement
+                                    () to display all the attribute of class.</strong>
+                                <div>
+                                    <p>
+                                        <button type="button" ng-click="oops_q4_output_btn()">Show Class
+                                            Inheritance</button>
+                                        <span ng-bind-html="oops_q4_result"></span> <br> <br> <br> <br>
+                                    </p>
+
+                                </div>
+                                <p>pdf</p>
+                                <div>
+                                    <strong>
+                                        <a href="assignments\Oops\oopsNotes.pdf">View Assignment</a>
+                                    </strong>
+                                </div>
+                            </div>
+                            <div id="dictionary">
+                                <code>Q1(a). Create Dictionary of five person with data items within
+                                        nested values we have name, age, birthdate.</code>
+                                <div>
+                                    <p>
+                                        <strong>Name :<input type="text" ng-model="dictInputq1_a"
+                                                placeholder="enter name"></strong> <br>
+                                        <strong>Age :<input type="age" ng-model="dictInputq1_b"
+                                                placeholder="enter age"></strong> <br>
+                                        <strong>Birthdate :<input type="date" ng-model="dictInputq1_c"></strong> <br>
+                                        <button ng-click="dictbtn1()" id="dictbtn1">Add to dictionary</button> <br>
+                                        {{dictOutputq1}} <br>
+                                    <details>
+                                        <summary> Question 1 Python Code : </summary>
+                                        <code>
+                                                            - var a = { <br>
+                                                                “p1”: {"Name": "Asf", "Age": 23, "Birthdate": "14/08/2000"}, <br>
+                                                                "P2": {"Name": "Kulsum", "Age": 18, "Birthday”: “05/10/2005"},<br>
+                                                                "P3": {"Name": "Yusuf", "Age"; 22, "Birthdate": "06/07/2001"},<br> 
+                                                                "P4": {"Name": “Amina", "Age": 14, "Birthdate": "16/12/2009"},<br> 
+                                                                "P5": {"Name": "Kulsum", "Age": 18, “Birthdate": "05/10/2005"}<br> 
+                                                                } <br>
+                                                                print (a) <br>
+                                                        Python Output: <br>
+                                                            { <br>
+                                                            “p1”: {"Name": "Asf", "Age": 23, "Birthdate": "14/06/2000"}, <br>
+                                                            "P2": {"Name": "Kulsum", "Age": 18, "Birthday”: “05/10/2005"}, <br>
+                                                            "P3": {"Name": "Yusuf", "Age"; 22, "Birthdate": "06/07/2001"}, <br>
+                                                            "P4": {"Name": “Amina", "Age": 14, "Birthdate": "16/12/2009"}, <br>
+                                                            "P5": {"Name": "Kulsum", "Age": 18, “Birthdate": "05/10/2005"} <br>
+                                                            } <br>
+                                                        </code>
+                                    </details>
+                                    </p>
+
+                                </div>
+                                <code>
+                                        (b)Display all the keys of person dictionary.
+                                    </code>
+                                <div>
+                                    <p>
+                                        <button ng-click="dictbtn2()">Display Key</button>
+                                        {{dictOutputq2}} <br>
+                                        <strong>
+                                            Python Code : <br>
+                                            -print (var, keys ()) <br>
+                                            python Output: <br>
+                                            dict_keys ([‘P1','P₂', 'P3', 'P4', 'PS']) <br>
+                                        </strong>
+                                    </p>
+
+                                </div>
+                                <code>
+                                        (c) Display name of person 3.
+                                    </code>
+                                <div>
+                                    <p>
+                                        <button ng-click="dictbtn3()">Person 3</button>
+                                        {{dictOutputq3}} <br>
+                                    <details>
+                                        <summary>Python code : </summary>
+                                        <code>
+                                                    → print (var. get ("p3")) <br>
+                                                    output: {"Name": "Yusuf" "Age: 22, "Birthdate": “14/06/2001” <br>
+                                                </code>
+                                    </details>
+                                    </p>
+
+                                </div>
+                                <code>
+                                        (d) Display all the values of person Dictionary.
+                                    </code>
+                                <div>
+                                    <p>
+                                        -print (var. values ()) <br>
+                                        Output: <br>
+                                        dict_values = ([ <br>
+                                        {"Name": "Asf", "Age": 23, "Birthdate": "14/06/2000"}, <br>
+                                        {"Name": "Kulsum", "Age": 18, "Birthday”: “05/10/2005"}, <br>
+                                        {"Name": "Yusuf", "Age"; 22, "Birthdate": "06/07/2001"}, <br>
+                                        {"Name": “Amina", "Age": 14, "Birthdate": "16/12/2009"}, <br>
+                                        {"Name": "Kulsum", "Age": 18, “Birthdate": "05/10/2005"} <br>
+                                        ]} <br>
+                                    </p>
+                                </div>
+                                <code>
+                                        (e) Add Sixth person in dictionary.
+                                    </code>
+                                <div>
+                                    <strong>
+                                        → Var a2 = {"P6": {"Name": "Afsari Khan", "Age" 34", Birthdate" = "1/01/1979"}}
+                                        <br>
+                                        a· update (a2) <br>
+                                        print (a) <br>
+                                        Output: <br>
+                                        { <br>
+                                        “p1”: {"Name": "Asf", "Age": 23, "Birthdate": "14/06/2000"}, <br>
+                                        "P2": {"Name": "Kulsum", "Age": 18, "Birthday”: “05/10/2005"}, <br>
+                                        "P3": {"Name": "Yusuf", "Age"; 22, "Birthdate": "06/07/2001"}, <br>
+                                        "P4": {"Name": “Amina", "Age": 14, "Birthdate": "16/12/2009"}, <br>
+                                        "P5": {"Name": "Kulsum", "Age": 18, “Birthdate": "05/10/2005"}, <br>
+                                        "P6": {"Name": "Afsari Khan", "Age" 34", Birthdate" = "1/01/1979"} <br>
+                                    </strong>
+                                </div>
+                                <code>
+                                        (f). Change the name Person2(pushyal).
+                                    </code>
+                                <div>
+                                    <p>
+                                        <strong>
+                                            -a ["p2"] ["Name"] = "Pushyal" <br>
+                                            print (var) <br>
+                                        </strong>
+                                    </p>
+
+                                </div>
+                                <code>
+                                        pdf
+                                    </code>
+                                <div>
+                                    <strong>
+                                        <a href="assignments\Dictionary\dictionaryNotes.pdf">View Assignment</a>
+                                    </strong>
+                                </div>
+
+                            </div>
+                            <div id="lambdafunction">
+                                <code>
+                                        Q1. Create Lambda function to find out power of passed number.
+                                    </code>
+                                <div>
+                                    <p>
+                                        → import math. <br>
+                                        power = lambda a: Math.issqrt (a) <br>
+                                        print ("Power of Entered Number is: ", power (110)) <br>
+                                        output: <br>
+                                        Power of entered number is 10. <br>
+                                    </p>
+                                </div>
+                                <code>
+                                        Q2. Create lambda function with two parameters to find power of <br>
+                                        the number where 2nd number is power of first.
+                                    </code>
+                                <div>
+                                    <p>
+                                        -import math <br>
+                                        power = lambda a, b: a**b <br>
+                                        print (power (a = (2), b = (3)] <br>
+                                        Output: 8 <br>
+                                    </p>
+                                </div>
+                                <code>
+                                        Q3. Create lambda function to find out entered no is positive negative.
+                                    </code>
+                                <div>
+                                    <p>
+                                        <input type="number" ng-model="lambdainputq3" placeholder="enter number">
+                                        <button ng-click="lambdabtnq3()">Find Even or Odd</button> {{lambdaoutputq3}}
+                                        <br>
+                                        <code>
+                                            - num = lambda a: “Positive” is a is greater than 0 else “Negative”. <br>
+                                            print (num (-1) <br>
+                                        </code>
+                                    </p>
+
+                                </div>
+                                <code>
+                                        Q4. Create lambda find out to find out biggest between two number.
+                                    </code>
+                                <div>
+                                    <p>
+                                        <input type="number" ng-model="lambdainputq4_a" placeholder="enter number">
+                                        <input type="number" ng-model="lambdainputq4_b" placeholder="enter number">
+                                        <button ng-click="lambdabtnq4()">Find Biggest</button> {{lambdaoutputq4}} <br>
+                                        <code>
+                                            - num = lambda a, b: “A is big” if a greater than b else “B is big”
+                                        </code>
+
+                                    </p>
+
+                                </div>
+                                <code>
+                                        Q5. Create lambda find out to find out entered number is even or odd.
+                                    </code>
+                                <div>
+                                    <p>
+                                        <input type="number" ng-model="lambdainputq5" placeholder="enter number">
+                                        <button ng-click="lambdabtnq5()">Find Even or Odd</button> {{lambdaoutputq5}}
+                                        <br>
+                                        <code>
+                                            - num = lambda a: "Even" if a % 12 == 0 else "Old Number") <br>
+                                            print (num(3) <br>
+                                            Output: odd number <br>
+                                        </code>
+                                    </p>
+
+                                </div>
+                                <code>
+                                        Q6. Create lambda function to find Cube of a number.
+                                    </code>
+                                <div>
+                                    <p>
+                                        <input type="number" ng-model="lambdainputq6" placeholder="enter number"> <br>
+
+                                        <button ng-click="lambdabtnq6()">Find Cube</button> Output : {{lambdaoutputq6}}
+                                        <br>
+                                        <code>
+                                                - num = lambda a: a*** <br>
+                                                print (num (3)) <br>
+                                                Output:27 <br>
+                                            </code>
+                                    </p>
+                                </div>
+                                <code>
+                                        Q7. Create lambda function to find out eligibility of age.
+                                    </code>
+                                <div>
+                                    <p>
+                                        <code>
+                                                <input type="number" ng-model="lambdaInput" placeholder="enter your age"> <button ng-click="lambaExamplebtn()">click</button> <br>
+                                                Output: {{lambaOutput}} <br>
+                                                python output : {{lambaOutputExplain}}
+                                            </code>
+                                    </p>
+                                </div>
+                                <strong>pdf</strong>
+                                <div>
+                                    <strong>
+                                        <a href="assignments\LambdaFunction\lambdaNotes.pdf">View Assignment</a>
+                                    </strong>
+                                </div>
+                            </div>
+                            <div id="listcomprehension">
+                                <code>
+                                        Q1. Using list Comprehension find out Number Divisible by 7 from 1 to 1000?
+                                    </code>
+                                <div>
+                                    <p>
+                                        <code>
+                                            python code :
+                                            - xyz = [a for a in range (7, 1001) if a % 7 == 0] <br>
+                                            print(xyz) <br>
+                                        </code>
+                                    </p>
+                                </div>
+                                <code>
+                                        Q2. Count Number of Spaces in string (using List Comprehension)?
+                                    </code>
+                                <div>
+                                    <p>
+                                        <code>
+                                                python code :
+                                                - strg = "kjdldmm skdjlmld kldllmkk;l nlmld kdllmdm kdjdmmd mlkmm mlm;m jlkf jmklmf " <br>
+                                                xyz = [a for a in strg if a.count(" ") ] <br>
+                                                print("Number of spaces in string : ",xyz.__len__()) <br>
+                                                output : Number of spaces in string : 11 <br>
+                                            </code>
+                                    </p>
+                                </div>
+                                <code>
+                                        Q3. Using List Comprehension Convert all Character to upper case in list Of words?
+                                    </code>
+                                <div>
+                                    <p>
+                                        <code>
+                                                strg1 = "kjdldmm skdjlmld kldllmkk;l nlmld kdllmdm kdjdmmd mlkmm mlm;m jlkf jmklmf " <br>
+                                                abc = [a.upper() for a in strg1 ] <br>
+                                                print("Capital Strings : ","".join(abc)) <br>
+                                                output: Capital Strings :  KJDLDMM SKDJLMLD KLDLLMKK;L NLMLD KDLLMDM KDJDMMD  MLKMM MLM;M JLKF JMKLMF <br>
+                                            </code>
+                                    </p>
+                                </div>
+                                <code>
+                                        Q4. Using list Comprehension find out Common Number in between two list? 
+                                    </code>
+                                <div>
+                                    <p>
+                                        <code>
+                                                ls = [12,2,1,43,5,3] <br>
+                                                ls2 = [2,5,8,9,43,76,1] <br>
+                                                liscompre = [a for a in ls if a in ls2] <br>
+                                                print(liscompre) <br>
+                                                output : [2, 1, 43, 5] <br>
+                                            </code>
+                                    </p>
+                                </div>
+                                <code>
+                                        Q5. Using List Comprehension find all Number from 12 to 1000 that has 3 in them? 
+                                    </code>
+                                <div>
+                                    <p>
+                                        <code>
+                                                [13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43, 53, 63, 73, 83, 93, 103, 113, 123, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 143, 153, 163, 173, 183, 193, 203, 213, 223, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 243, 253, 263, 273, 283, 293, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 
+                                                393, 394, 395, 396, 397, 398, 399, 403, 413, 423, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 443, 453, 463, 473, 483, 493, 503, 513, 523, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 543, 553, 563, 573, 583, 593, 603, 613, 623, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 643, 653, 663, 673, 683, 693, 703, 713, 723, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 743, 753, 763, 773, 783, 793, 803, 813, 823, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 843, 853, 863, 873, 883, 893, 903, 913, 923, 930, 931, 932, 933, 934, 935, 936, 937, 938, 939, 943, 953, 963, 973, 983, 993]
+                                            </code>
+                                    </p>
+                                </div>
+                                <code>
+                                        Dictionary comprehension <br>
+                                    </code>
+                                <div>
+                                    <p>
+                                        <code>
+                                                # normal <br>
+                                                ls = [12,2,1,43,5,3] <br>
+                                                ls2 = [2,5,8,9,43,76,1] <br>
+                                                xyz = {x:y for (x,y) in zip(ls,ls2)} <br>
+                                                print(xyz) <br>
+                                                output: {12: 2, 2: 5, 1: 8, 43: 9, 5: 43, 3: 76} <br>
+                                                # Nested <br>
+                                                kii = ["p1","p2","p3","p4","p5","p6"] <br>
+                                                ls = ["Aseef","Shubham","Ali","Ram","Sai","Shiva"] <br>
+                                                ls2 = [2,5,8,9,43,76,1] <br>
+                                                xyz = {x:{y:z} for (x,y,z) in zip(kii,ls,ls2)} <br>
+                                                print(xyz) <br>
+                                                output: {'p1': {'Aseef': 2}, 'p2': {'Shubham': 5}, 'p3': {'Ali': 8}, 'p4': {'Ram': 9}, 'p5': {'Sai': 43}, 'p6': {'Shiva': 76}}
+                                            </code>
+                                    </p>
+                                </div>
+                            </div>
+                            <div id="mfrfuntion">
+                                <strong>Intro</strong>
+                                <div>
+                                    <p>
+                                    <fieldset>
+                                        <legend>Map</legend>
+                                        map() function returns a map object (which is an iterator) of the results
+                                        after
+                                        applying the given function to each item of a given iterable (list, tuple,
+                                        etc.)
+                                        Syntax: Map (fun, iter)
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Filter</legend>
+                                        The filter() method filters the given sequence with the help of a function
+                                        that tests. each element in the sequence to be true or not.
+                                        Syntax: filter (function, Sequence).
+                                    </fieldset>
+                                    <fieldset>
+                                        <legend>Reduce</legend>
+                                        The reduce (fun, seq) function is used to apply a particular function passed
+                                        in its argument to all the list elements mentioned in the sequence passed
+                                        along. This function is defined in "functools" module.
+                                    </fieldset>
+
+                                    </p>
+                                </div>
+                                <strong>map() Assignment</strong>
+                                <div>
+                                    <code>
+                                            Q1. Using Het map function create two power list where is power of 2nd. <br>
+                                            - from math import * <br>
+                                            Ls = [4,9,16, 25,36] <br>
+                                            asf = map(lambda a: math.sqrt(a), ls) <br>
+                                            print (list (asf)) <br>
+                                            output: [2,3,4,5,6] <br>
+                                            Q2. Create list of numbers using map find out even or odd numbers (using lambda). <br>
+                                            - wc = [2,4S, 37, 38, 100] <br>
+                                            asf = map ((lambda a: str (a) + “is Even Number" if a%2 == 0 else <br>
+                                            str(a) + " is Odd Number ", wc) <br>
+                                            print(list(asf)) <br>
+                                        </code>
+                                </div>
+                                <strong>filter() Assignment</strong>
+                                <div>
+                                    <code>
+                                            Q 1. using filter find out even numbers in loop (use lambda) <br>
+                                            - ab = [12,33,4 4, 3, 2, 43, 65, 867, 908] <br>
+                                            filter (lambda a: 1 if a %2== 0 else 0 ab) <br>
+                                            print (list (ls)) <br>
+                                            Q2. Using filter find all find all fruits in list Starting with A (use Lambda) <br>
+                                            - ab = ["Guava", "Mango" "Banana", "Pomegranates", ”Chiku”, "Lichi"] <br>
+                                            Ls = filter (lambda a : 1 if “e” in a else o, ab). <br>
+                                            print (list ((s)) <br>
+                                        </code>
+                                </div>
+                                <strong>reduce() Assignment</strong>
+                                <div>
+                                    <code>
+                                            Q1. Using reduce find out biggest between two numbers in list (uses lambda) <br>
+                                            -from functools import reduce. <br>
+                                            - ab = [13,2] <br>
+                                            Is = reduce (lambda a,b: "A is Big" if a greater than b else "B is Big", ab) <br>
+                                            Print(ls). <br>
+                                            Q2 find out smallest number in list using reduce. <br>
+                                            - def asf(a, b): <br>
+                                            ls = [a,b] <br>
+                                            return min (ls) <br>                                    
+                                            ak =[12, 14, 1, 56,77] <br>
+                                            redu = reduce (asf, ac) <br>
+                                            print (redu) <br>
+                                            Q3. Using reduce find out palindrome strings (use lambda). <br>
+                                            → This question is removed by faculty <br>
+                                        </code>
+                                </div>
+                            </div>
+                            <div id="fileHandling">
+                                <strong>Example of File Handling </strong>
+                                <div>
+                                    <p>
+                                        Q. Allow the user to write in file.txt and if user type exit file should
+                                        get close. <br>
+                                        - abc = input ("Do you want to write in the file? (YES/NO)") <br>
+                                        b = ["end", "END"] <br>
+                                        While abc == “yes” or abc == "YES": <br>
+                                        file = open ("file.txt", "w") <br>
+                                        asf = 1 <br>
+                                        while asf less than=5: xyz=input (" ") <br>
+                                            file.write(xyz) <br>
+                                            for C in xyz: <br>
+                                            for d in b: <br>
+                                            if c in b: <br>
+                                            file.close() <br>
+                                            asf = 6 <br>
+                                            asf =+ 1 <br>
+                                        </p>
+                                        
+                                    </div>
+                            </div>
+                            <div id="taskGiven">
+                                        <strong>Quiz Assignment Date: 8/09/23</strong>
+                                        <div>
+                                            <code>
+                                            Print (“\t*** Quiz Game ***”) <br>
+                                            print ("\t *** Your Answer in small letter hint → (a, b, c, d)
+                                            ****") <br>
+                                            11 = [
+                                            "1. What is the colour of a lemon? ", <br>
+                                            "2. What is the full form of pf”, <br>
+                                            “3. Who is the Owner of WIPRO Company?”, <br>
+                                            "4. Among Below which is the biggest Continent in the world?", <br>
+                                            "5. Which is the largest animal in the world.?”, <br>
+                                            “6. Which is the 29th State of India?”, <br>
+                                            “7. Which continent is known as Dark Continent?", <br>
+                                            "8. Which is the largest desert in the world?", <br>
+                                            "9. How many letters are there in the English alphabet?" <br>
+                                            “10. How many days are there August?"
+                                            ] <br>
+                                            l2 = ["Red" "Blue", "Green", “Yellow”], <br>
+                                            [“Prefer Fortune", "Policy further”, “Provident Fund",
+                                            "Professor Folly"], <br>
+                                            [“Azim Premji”, “Anand Mahindra”, <br>
+                                            Ravi Teja", "Aseef khan, Walmart John"], <br>
+                                            ["Africa" "Asia"," Russia"," "Antarctica"], <br>
+                                            [“Giraffe”, “Elephant”, "Gorilla", "Whale”], <br>
+                                            ["Rajasthan", "Goa", "Uttarakhand”, “Telangana”], <br>
+                                            [“America” "Green Land", "Switzerland", "Australia"], <br>
+                                            [“jezail”, “Egyptian” "Arab" "Sahara”], <br>
+                                            ["27", "21", "23", "26"], <br>
+                                            ["28","29","30", “31”] <br>
+                                            l3 = ["d", "c", "a", "b", "d", "d", "d", "d", "d”] <br>
+                                            Count = 1 <br>
+                                            for a in zip (l1, l2): ← (Very Imp function) <br>
+                                            print(a) <br>
+                                            user = input ("Answer: ") <br>
+                                            if user in L3: <br>
+                                            Count += 1 <br>
+                                            if count == l3: <br>
+                                            if count! = 10: <br>
+                                            print (" Your Score: ", count) <br>
+                                            elif count! = 10: <br>
+                                            print (" Not bad you Scored!", count) <br>
+                                            else: <br>
+                                            print ("OOPS You failed!") <br>
+                                        </code>
+                                        </div>
+                                        <strong>
+                                            Space and then Exit Task
+                                        </strong>
+                                        <div>
+                                            <code>
+                                            abc = input("Start Game Yes/No?") <br>
+                                            lst = [] <br>
+                                            while abc == "Yes": <br>
+                                            user = input("Enter Text : ") <br>
+                                            part = user.split(' ') <br>
+                                            if part: <br>
+                                            if part[0]: <br>
+                                            pass <br>
+                                            if len(part) greater than 1 and part[1]=="exit": <br>
+                                            break <br>
+                                        </code>
+
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" ng-class="{ active: selectedTab === 2 }">
+                        <div id="htmlcontentID">
+                            <strong>Image Mapping(HTML)</strong>
+                            <div>
+                                <p>Click on the computer, phone or the cup of tea to go new page and read more topic:
+                                </p>
+                                <img src="Images\workspace.jpg" alt="workspace" usemap="#workmap">
+                                <map name="workmap">
+                                    <area shape="rect" coords="200,60,190,40" href="Images\iphone.jpg" alt="iphone"
+                                        style="cursor: pointer;">
+                                    <area shape="rect" coords="70,20,180,80" href="Images\laptop.jpg" alt="laptop">
+                                    <area shape="circle" coords="30,40,30,40" href="Images\coffee.jpg" alt="coffee">
+                                </map>
+                            </div>
+                            <strong>Article Example(HTML)</strong>
+                            <div>
+                                <nav style="background-color: cyan;">
+                                    <a href="#" style="padding-right: 1%;">First Tab</a>
+                                    <a href="#" style="padding-right: 1%;">Second Tab</a>
+                                    <a href="#" style="padding-right: 1%;">Third Tab</a>
+                                </nav>
+                                <article
+                                    style="width: 450px; border: 2px solid greenyellow; border-radius: 10px; margin: 5px;">
+                                    <img src="Images\showcase.jpg" alt="unsupported format"> <br>
+                                    <b>Boriwali(West)</b> <br>
+                                    <p>
+                                        We enable people across the globe to use I.T. optimally and efficiently through
+                                        world-class I.T. training solutions. Today, Aptech students are working all over
+                                        the
+                                        world building knowledge corporations, communities and knowledge societies.
+                                    </p> <br>
+                                    <meter value="50" min="0" max="100" high="90" low="20">8 out 10</meter> <br>
+                                    <progress value="90" max="100"></progress>
+                                </article>
+
+                            </div>
+                            <strong>Transition(CSS)</strong>
+                            <div>
+                                <div id="transitionExampleID">
+                                    <img src="Images\showcase.jpg" alt="no image">
+                                </div>
+                            </div>
+                            <strong>Animation(CSS)</strong>
+                            <div>
+                                <div>
+                                    <img img src="Images\showcase.jpg" id="animationExampleID" alt="no image">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="tab-content" ng-class="{ active: selectedTab === 3 }">
+                        <div id="javaScriptcontent">
+                            <strong>GoogleAPI</strong>
+                            <div>
+                                <button type="button" onclick="checkgeo()">Check Geo Location Compatible or Not</button>
+                                <button type="button" onclick="showpoistion()">Show Position</button>
+                                <div id="locID"></div><br>
+                                <button type="button" onclick="getlocation()">Display Position</button><br>
+                                <div style="border: 5px solid purple; width: 200px; height: 200px; " id="mapID"></div>
+                                <p>Output is correct Add your key</p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    show code
+                                </button>
+                                
+                                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Code</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="Images\geolocation(javascript).png" alt="">
+                                            <img src="Images\geolocation2(javascript).png" alt="">
+                                            <img src="Images\geolocation3(javascript).png" alt="">
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div> <br> <br>
+                                <img src="Images\mapOutput.png" alt="no Image">
+                            </div>
+                            <strong>Array Assignment and Example</strong>
+                            <div>
+                                <details>
+                                    <summary>
+                                        Assignment Using Array to Insert and Display Value
+                                    </summary>
+                                    <p>
+                                        <input type="number" id="fetch" />
+                                        <button type="button" onclick="insert()">Insert</button>
+                                        <button type="button" onclick="display()">Display</button>
+                                    <p>Exiting Element in Array: [10,20]</p>
+                                    <pre id="output"></pre>
+                                    </p>
+
+                                </details>
+                                <details>
+                                    <summary>
+                                        Example of 1D and 2D Array
+                                    </summary>
+                                    <p>
+                                        <a href="Images\exampleArray(example.js).png"
+                                            style="cursor: pointer;">JavaScript</a><br>
+                                        <a href="Images\exampleArray(index.html).png"
+                                            style="cursor: pointer;">Output</a>
+                                    </p>
+                                </details>
+                            </div>
+                            <strong>Events in JS (Task: Create login form which will open salary of employee)</strong>
+                            <div>
+                                <form>
+                                    <p>Name: <input type="text" id="naam" placeholder="Type Aseef"><br></p>
+                                    <button id="loginBTN">Login</button>
+                                </form>
+                                <div id="employeContentID" style="display: none;">
+                                    <p>Salary : <input type="number" id="sal" onkeydown="calc()"
+                                            placeholder="type salary to show event in js"><br></p>
+                                    <p>Hra : <input type="number" id="house" disabled><br></p>
+                                    <p>Commission : <input type="number" id="comm" disabled><br></p>
+                                    <p>P.F : <input type="number" id="pf" disabled><br></p>
+                                    <p>Net : <input type="number" id="total" disabled><br></p>
+                                    <p>Grade : <input type="text" id="Grad"></p>
+                                </div>
+
+                            </div>
+                            <strong>Funtion with and without Parameter</strong>
+                            <div>
+                                <p>
+                                    <label for="sprinput"> Enter Radius to find volume of sphere without
+                                        parameter<br>and
+                                        Area of Circle(withParameter):
+                                    </label><input type="text" placeholder="enter radius " id="sprinput"> <br>
+                                    <label for="lengthinputID">Enter Length and Breath to find Area of Rectangle:
+                                    </label>
+                                    <input type="number" placeholder="length" id="lengthinputID"> <input type="number"
+                                        placeholder="breath" id="breathinputID">
+                                    <button type="button" onclick="spherefun()">Find</button>
+                                <div id="sphereOUTPUT"></div>
+                                </p>
+                            </div>
+                            <strong>RegEX</strong>
+                            <div>
+                                <p>
+                                    <a href="Images\regexExample.png">View Code</a>
+                                </p>
+                            </div>
+                            <strong>Object in JavaScript</strong>
+                            <div>
+                                <button onclick="abc.say_hello()">Click to See Example</button>
+                            </div>
+                            <strong>Thread Example</strong>
+                            <div>
+                                <button onclick="threadBTN()">Show Output</button>
+                                <div id="threadOutput"></div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="tab-content" ng-class="{ active: selectedTab === 4 }">
+                        <div id="jqueycontent">
+                            <fieldset class="the-fieldset">
+                                <legend class="the-legend">
+                                    <strong>WebStorage in JavaScript and Tooltip in Jquery</strong>
+                                </legend>
+                                <div style="margin: 2%;">
+                                    <h1>Local Storage Set Item</h1>
+                                    <input type="text" id="user" title="Enter Something Bro!" placeholder="Enter something and submit">
+                                    <button onclick="store()">Submit</button>
+                                    <h1>Local Storage Get Item</h1> 
+                                    <button type="button" onclick="retrieve()">Get Value</button>
+                                    <button type="button" onclick="remove()">Remove Value</button>
+                                </div>
+                                
+                            </fieldset>
+                            <fieldset class="the-fieldset">
+                                <legend class="the-legend"><strong>Check Selector in Jquery</strong></legend>
+                                <div style="border: 2px solid;margin: 5%; padding: 1%; width: fit-content;">
+                                    <b>Check and submit to see Countries</b><br>
+                                    <input type="checkbox" value="India"><br>
+                                    <input type="checkbox" value="Germany"><br>
+                                    <input type="checkbox" value="Poland"><br>
+                                    <input type="checkbox" value="Switzerland"><br>
+                                    <input type="checkbox" value="Australlia"><br>
+                                    <button id="btnsubmit" >Submit</button>
+                                </div>
+                                <div id="divID" style="border: 2PX solid;">
+                        
+                                </div>
+                            </fieldset>
+                            <fieldset class="the-fieldset">
+                                <legend class="the-legend">
+                                   <strong>Class Selector in Jquery</strong>
+                                </legend>
+                                
+                                <div>
+                                    Lorem ipsum dolor sit amet consectetur <span class="check">Span 1</span> adipisicing elit.
+                                    Consequatur est ex repellat quas sit deleniti? Dicta, dolorum. 
+                                    Soluta, eum ea veniam quia necessitatibus rem, natus <span class="check">Span 2</span>...reprehenderit ut molestiae accusantium quae.
+                                    
+                                </div>
+                            </fieldset>
+                           <fieldset class="the-fieldset">
+                                <legend class="the-legend"><strong>Element Selector in Jquery</strong></legend>
+                                <table border="2px solid" style="text-align: center;">
+                                    <th colspan="5"> <span id="spanID"></span>
+                                    <tr>
+                                        <td><mark>India</mark></td>
+                                        <td>Germany</td>
+                                        <td>Russia</td>
+                                        <td><mark>Brazil</mark></td>
+                                        <td>Ladakh</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td>France</td>
+                                        <td>Europe</td>
+                                        <td>George Washington</td>
+                                        <td>Paris</td>
+                                        <td>Hawai</td>
+                                    </tr>
+                                </th>
+                                </table>
+                           </fieldset>
+                           <fieldset class="the-fieldset">
+                                <legend class="the-legend">Dynamic Test in Jquery</legend>
+                                <button id="dd">Hover here to Test</button>
+                                
+
+                           </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" ng-class="{ active: selectedTab === 5 }">
+
+                        <div id="angularjsID">
+                            <fieldset class="the-fieldset">
+
+                                <legend class="the-legend"><strong>AngularJS Directives</strong></legend>
+                                <strong>1. Check Box to see Show/Hide using ng-hide and ng-show</strong> <br>
+                                <input type="checkbox" ng-model="val" > 
+                                 <div ng-hide="val">
+                                    <p>Hide</p>
+                                </div> 
+                                 <div ng-show="val">
+                                    <p>Show</p>
+                                </div>
+                                
+                                <strong>1.1 Test Hide and Show</strong><br>
+                                <label for="abcID">Enter Age:</label> <input type="text" id="abcID" placeholder="enter your age" ng-model="ABC" ng-keyup="check(ABC)">
+                                <div ng-hide="ans">
+                                    <b style="color: red;">Not Eligible to Voting</b>
+                                </div>
+                                <div ng-show="ans">
+                                    <b style="color: rgb(152, 217, 152); text-shadow: 2px 2px forestgreen">Eligibe to Vote</b>
+                                </div>
+                                <strong>2. Use of ng-repeat</strong> <br>
+                                <input type="text" ng-model="user" placeholder=" To do list">
+                                <button  ng-click="Add()">ADD</button> <br>
+                                <label ng-repeat="a in task">{{ a.user }} <br></label>
+                                <code>{{ duplicatetask }}</code>
+                                <details>
+                                    <summary style="font-size: xx-large;">
+                                        Assignment
+                                    </summary>
+                                    <p>
+                                        <div id="main">
+                                            <div>
+                                                <h1>Company Monthly Salary</h1>
+                                            </div>
+                                            <div id="2lyout">
+                                                <table border="5px" >
+                                                    <tr>
+                                                        <td><label>First Name</label></td>
+                                                        <td><input type="text" ng-model="firstNameA"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label>Last Name</label></td>
+                                                        <td><input type="text" ng-model="lastNameA"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label>Employee ID</label></td>
+                                                        <td><input type="number" ng-model="employeeIDA"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label>Job Title</label></td>
+                                                        <td><input type="text" ng-model="jobTitleA"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td> <label>Employee Salary</label> </td>
+                                                        <td><input type="number" ng-model="empSalaryA"></td>
+                                                    </tr>
+                                                    <td colspan="2">
+                                                    <button type="button" id="btn" ng-click="ngrepeatTaskbtn()"
+                                                            style="border-radius: 25px; width: 100%; background-color: yellowgreen; cursor: pointer; "  onmouseover="glow()"
+                                                            onmouseout="stopglow()">Submit</button>
+                                                    </td>
+                                    
+                                                </table>
+                                            </div>
+                                    
+                                        </div>
+                                        <div>
+                                            <code style="color: red;">{{ duplicateID }}</code>
+                                            <h2>Employee List</h2>
+                                            <table border="5px">
+                                                <tr>
+                                                    <th>FirstName</th>
+                                                    <td ng-repeat="fstNameOUTPUT in firstNameB">{{ fstNameOUTPUT.firstNameA }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>LastName</th>
+                                                    <td ng-repeat="lstNameOUTPUT in lastNameB">{{ lstNameOUTPUT.lastNameA }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <td ng-repeat="empIDOUTPUT in empidB">{{ empIDOUTPUT.employeeID }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Title</th> 
+                                                    <td ng-repeat="tittleOUTPUT in titleB">{{ tittleOUTPUT.jobTitleA }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Salary</th>
+                                                    <td ng-repeat="salaryOUTPUT in salaryB ">{{ salaryOUTPUT.empSalaryA }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Delete Employee</th>
+                                                    <td ng-bind-html="deletBTN"  ng-click="deletebtnClicked()" ng-repeat="deletBTN in deletebtnB "></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                       
+                                    </p>
+
+                                </details>
+                            </fieldset>
+                            <fieldset class="the-fieldset">
+                                <legend class="the-legend"><strong>Example of API/REST API</strong></legend>
+                                <p>---------API---------</p>
+                                <button ng-click="getapi()">Get Api Response</button> <br>
+                                    {{text}}
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal8">
+                                        show code
+                                    </button>
+                                    <div class="modal fade" id="exampleModal8" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel8">Code</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="Images/getapi1(angularjs).png" alt="">
+                                                <img src="Images/getapi2(angularjs).png" alt="">
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div> <br> <br>                                        
+                                <p>---------REST API---------------</p>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal6">
+                                    show code
+                                </button>
+                                <div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel6">Code</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="Images\angularhttp.png" alt="">
+                                            <img src="Images\angularjs(httpjson1).png" alt="">
+                                            <img src="Images\angularjs(httpjson2).png" alt="">
+                                            <img src="Images\angularhttp(html).png" alt="">
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div> <br> <br>
+                                <table align="center" border="1">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Gender</th>
+                                        <th>Name</th>
+                                        <th>Age</th>
+                                        <th>Adrress</th>
+                                        <tr ng-repeat="emp in employee">
+                                            <td>{{emp.id}}</td>
+                                            <td>{{emp.gender}}</td>
+                                            <td>{{emp.name}}</td>
+                                            <td>{{emp.age}}</td>
+                                            <td>{{emp.address}}</td>
+                                        </tr>
+                                    </tr>
+                                </table> <br>
+                            </fieldset>
+                            <fieldset class="the-fieldset">
+                                <legend class="the-legend">
+                                    Routing in AngularJS
+                                </legend>
+                                <a href="#!courses">Tab1</a>
+                                <a href="#!internship">Tab2</a>
+    
+                                <div ng-view style="background-color: lightsteelblue;color : darkred">
+                                </div>
+                            </fieldset>
+                            <fieldset class="the-fieldset">
+                                <legend class="the-legend">
+                                    <strong> Currency and Date in Angularjs</strong>   
+                                </legend>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                                    show code
+                                </button>
+                                
+                                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel2">Code</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="Images\currency(angularjs).png" alt="">
+                                            <img src="Images\date(angularjs).png" alt="">
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div> <br> <br>
+                                <div>
+                                    <p>---------Currency-----------</p>
+                                    ByDefault Currency: {{ person.salary | currency}}<br>
+                                    European Currency: {{ person.salary | currency: 'Euro.'}} <br>
+                                    Two Decimal Currency: {{ person.salary | currency: 'Euro.'}} <br>
+                                    <p>------------Date------------</p>
+                                    Todays Date: {{ today | date}}<br>
+                                    Short: {{ today| date:'short'}}<br>
+                                    Medium: {{today | date:'medium'}}<br>
+                                    ShortDate: {{today | date:'shortDate'}}<br>
+                                    LongDate: {{today | date:'longDate'}}
+                            
+                                </div>
+                                <details>
+                                    <summary style="font-size: xx-large;">Assignment</summary>
+                                    <div  ng-init="default=0" style="margin: 5%;padding: 2%; border: solid red;text-align: center;">
+                                        Enter Your salary: <input type="text" ng-model="ans"><br>
+                                        Enter Your Bonus: <input type="text" ng-model="default" ng-keyup="default"><br>
+                                        <i> The employee deduction is(Insurance 8%) : {{ insurance = 8/100 * ans |currency:'Rs '}}<br>
+                                            The PF Deduction is (pf 11%): {{ pf = 11/100 * ans | currency:'Rs '}}<br>
+                                            The Bonus Addition is : {{default | currency:'Rs '}}<br>
+                                            The Income Tax Deduction is (16%) : {{ gst = 16/100 * ans | currency:'Rs '}}<br></i>
+                                        <b>Your Final Salary is: {{finalsal() |currency:'Rs ' }}</b>
+                                    </div>
+                                </details>
+                            </fieldset>
+                            <fieldset class="the-fieldset">
+                                <legend class="the-legend"><strong>Filter in AngularJS</strong></legend>
+                                <div>
+                                    <input type="text" ng-model="search" placeholder="search item from below">
+                                    <div>
+                                        {{ myArr | filter:search}}
+                                    </div>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+                                        show code
+                                    </button>
+                                    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel3">Code</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="Images\filter(angularjs).png" alt="">
+                                            </div>
+                                            <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div> <br> <br>
+                                </div>        
+
+                            </fieldset>
+                            <fieldset class="the-fieldset">
+                                <legend class="the-legend"><strong>Injecting Factory, Service and Constant in AngularJS</strong></legend>
+                                <input type="number" ng-model="number" placeholder="enter value to test below" /><br>
+                                <p>
+                                Constant in Angularjs meaning to assign value to variable which can
+                                use as value
+                                </p>
+                                <button type="button" ng-click="area()">Constant to find Area Circle Which assign pi value</button>
+                                <p>
+                                Factory in AngularJS need factoryobj which returns a function and then
+                                return itself
+                                </p>
+                                <button type="button" ng-click="sqaure()">FactorySqaureFunction</button>
+                                <p>Service in AngularJS doesn't need obj</p>
+                                <button type="button" ng-click="cube()">ServiceCubeFunction</button>
+
+                                <table border="2px">
+                                <th>
+                                    Display Box (●'◡'●)
+                                    <td>
+                                    {{result}}
+                                    </td>
+                                </th>
+                                </table> <br>
+
+                            </fieldset>
+                            <fieldset class="the-fieldset">
+                                <legend class="the-legend"><strong>Dynamic Template</strong></legend>
+                                <select ng-model="model.loanType">
+                                    <option value="">Select Option</option>
+                                    <option value="1">Template1</option>
+                                    <option value="2">Template2</option>
+                                </select>
+                                <br>
+                                <loan-detail-form loan="model">
+                                    <script type="text/ng-template" id="template1">
+                
+                                        <form>
+                                            <fieldset>
+                                                <legend>Dynamic Template1</legend>
+                                                <center>
+                                                    <table border="2px">
+                                                        <thead>Application Form</thead>
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <td>
+                                                                <input type="text" ng-model="loan.attributeA">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>Address</th>
+                                                            <td>
+                                                                <input type="text">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>ContactNo.</th>
+                                                            <td><input type="text"></td>
+                                                        </tr>
+                                                    </table>
+                                                </center>
+                    
+                                            </fieldset>
+                                        </form>
+                                    </script>
+                                
+                    
+                                <script type="text/ng-template" id="template2">
+                                    <form>
+                                        <fieldset>
+                                            <legend>Dynamic Template2</legend>
+                                            <center>
+                                                <table border="2px">
+                                                    <thead>Inventory List</thead>
+                                                    <tr>
+                                                        <th>Box</th>
+                                                        <td>
+                                                            <input type="text" ng-model="loan.attributeB">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Cups</th>
+                                                        <td>
+                                                            <input type="text" ng-model="attributeC">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Browniee Box.</th>
+                                                        <td><input type="text"></td>
+                                                    </tr>
+                                                </table>
+                                            </center>
+                    
+                                        </fieldset>
+                                    </form>
+                                </script>
+                                </loan-detail-form>    
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">
+                                    show code
+                                </button>
+                                
+                                <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel4">Code</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="Images\template1(angularJS).png" alt="">
+                                            <img src="Images\template2(angularJS).png" alt="">
+                                            <img src="Images\template3(angularJS).png" alt="">
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div> <br> <br>
+                            </fieldset>
+                            <fieldset class="the-fieldset">
+
+                                <legend class="the-legend"><strong>Custom Directive</strong></legend>
+                                <h5>🚩Custom Directive</h5>
+                                <div>
+                                    <div asf-khan></div>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal5">
+                                    show code
+                                </button>
+                                
+                                <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel5">Code</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="Images\customdirectiveMain(angularjs).png" alt="">
+                                            <img src="Images\customdirective5(angularjs).png" alt="">
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div> <br> <br>
+                                <h5>🚩Isolating Scope of a Directive</h5>
+                                <div>
+                        
+                                <my-customer info="nao"></my-customer><br>
+                                <my-customer info="ase"></my-customer>
+                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal7">
+                                    show code
+                                </button>
+                                
+                                <div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                                    <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel7">Code</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="Images\customdirective(angularjs).png" alt="">
+                                            <img src="Images\customdirective2(angularjs).png" alt="">
+                                            <img src="Images\customdirective3(angularjs).png" alt="">
+                                            <img src="Images\customdirective4(angularjs).png" alt="">
+                                        </div>
+                                        <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </div> <br> <br>
+                            </fieldset>
+                            <fieldset class="the-fieldset">
+                                <legend class="the-legend">
+                                    <strong>From Validation in AngularJS</strong>
+                                </legend>
+                                <form name="myForm">
+                                    <label>First Name</label>
+                                    <input type="text" required name="myInput" ng-model="myunput" ng-required="true"><br>
+                                    <label>LastName</label>
+                                    <input type="text" required name="myInput" ng-model="lastName" ng-required="true"><br>
+                                    <label>Email</label>
+                                    <input type="email" name="input" ng-model="emailID" ng-minlength="5" ng-required="true"><br>
+                                    <span class="error" ng-show="myForm.input.$error.email"> Not valid Email !</span>
+                                    <button>Submit</button><br>
+                                    Email ID = {{emailID}} <br>
+                                    myForm.input.$valid = {{myForm.input.$valid}} <br>
+                                    myForm.input.$error = {{myForm.input.$error}} <br>
+                                    myForm.input.$email = {{!!myForm.$error.email}} <br>
+                               </form>
+                               <p>The input Valid state : {{myForm.myInput.$valid}}</p>
+                               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal9">
+                                show code
+                            </button>
+                            
+                            <div class="modal fade" id="exampleModal9" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                                <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel8">Code</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <img src="Images\api(angularjs).png" alt="">
+                                        <img src="Images\api2(angularjs).png" alt="">
+                                        
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                                </div>
+                            </div> <br> <br>
+                            </fieldset>
+                        </div>
+                       
+                    </div>
+
+                    <div class="tab-content" ng-class="{ active: selectedTab === 6 }">
+                        <div id="mysqlcontent">
+                            <strong>Assignment I [group by, min(), max(), inner join, left join]</strong>
+                            <div>
+                                <textarea rows="20" cols="30" readonly style="text-align: left;">
+
+                                -- use asf;
+                                -- create table emp(
+                                -- empno int primary key,
+                                -- ename varchar(10) default null,
+                                -- job varchar(9) default null,
+                                -- mgr decimal(4,0) default null,
+                                -- hiredate date default null,
+                                -- sal decimal default null,
+                                -- comm decimal(7,2) default null,
+                                -- deptno int not null,
+                                -- foreign key (deptno) references dept(deptno)
+                                -- );
+                                -- create table dept(
+                                -- deptno int primary key ,
+                                -- dname varchar(14) default null,
+                                -- loc varchar(133) default null
+                                -- );
+                                
+                                -- insert into dept values(10,"Accounting","New York");
+                                -- insert into dept values(20,"Research","Dallas");
+                                -- insert into dept values(30,"Sales","Chicago");
+                                -- insert into dept values(40,"Operations","Boston");
+                                -- insert into emp value(7369,"Smith","Clerk",7002,'1980-12-17',800.00,null,20);
+                                -- insert into emp value(7499,"Allen","SalesMan",7698,'1981-02-20',1600.00,300.00,30);
+                                -- insert into emp value(7521,"Ward","SalesMan",7698,'1981-02-22',1250.00,500.00,30);
+                                -- insert into emp value(7566,"Jones","Manager",7839,'1981-04-02',2975.00,null,20);
+                                -- insert into emp value(7654,"Martin","Saleman",7698,'1981-09-28',1250.00,1400.00,30);
+                                -- insert into emp value(7698,"Blake","Manager",7839,'1981-05-01',2850.00,null,30);
+                                -- insert into emp value(7782,"Clark","Manager",7839,'1981-06-09',2450.00,null,10);
+                                -- insert into emp value(7788,"Scott","Analyst",7566,'1982-12-09',3000.00,null,20);
+                                -- insert into emp value(7839,"King","President",null,'1981-11-17',5000.00,null,10);
+                                -- insert into emp value(7844,"Turner","Salesman",7698,'1981-09-08',1500.00,0.00,30);
+                                -- insert into emp value(7876,"Adams","Clerk",7788,'1983-01-12',1100.00,null,20);
+                                -- insert into emp value(7900,"James","Clerk",7698,'1981-12-03',950.00,null,30);
+                                -- insert into emp value(7902,"Ford","Analyst",7566,'1981-12-03',3000.00,null,20);
+                                -- insert into emp value(7934,"Miller","Clerk",7782,'1982-01-23',1300.00,null,10);
+                                -- select * from emp;
+                                -- select * from dept;
+                                ------------------------------------
+                                -- Solution: 
+                                -- update emp set ename = "Scott" where empno = 7788;
+                                -- select job as a,avg(sal) as Average_salary  from emp group by a;-- Query 1
+                                -- select job as a,avg(sal) as Average_salary,dname  from emp inner join dept on emp.deptno = dept.deptno group by a;-- Query 2
+                                -- select dname,min(sal) as Minimum_salary,max(sal) as Maximum_Salary,sum(sal) as Total_salary  from emp inner join dept on emp.deptno = dept.deptno ;-- Query 3
+                                -- select ename,job ,sal as salary  from emp where sal greater than 3000 ;-- Query 4
+                                -- select min(hiredate) as Old_EMP,max(hiredate) as Newest_EMP  from emp ;-- Query 5
+                                -- select dname from emp left join dept on emp.deptno = dept.deptno where empno  greater than 2 group by dname;  -- Query 6
+                                -- select  ename,job ,sal as salary ,deptno as Department_Number from emp  where sal greater than 3000 ;-- Query 7
+                                -- select loc as Location,dname,sal,comm from emp inner join dept on emp.deptno = dept.deptno  group by loc having sum(sal) ;--  Pending
+                                                    </textarea> <br>
+                                <code>Assignment Given Aptech faculty: Mrs.Supriya Kulkarni</code>
+
+                            </div>
+
+                            <strong>Assignment II [constraint, auto increment, update primary key]</strong>
+                            <div>
+                                <textarea rows="20" cols="30" readonly style="text-align: left;">
+
+
+                                -- use asf;
+                                -- create table Employees_MCM(
+                                -- emp_id int ,
+                                -- name varchar(50),
+                                -- department varchar(50),
+                                -- post varchar(50),
+                                -- experience int
+                                -- );
+                                -- insert into Employees_MCM(name,department,post,experience) values ("Rohit","IT","Junior Developer",0),("Hemanshi","Sales","Custumer Service Excecutive",2)
+                                -- ,("Vasant","Website Designer","Employee",1),("Fuji","Sales","Sales Excecutive",3),("Karuna","Website Developer","Intern",1),("Rahul","Sales","Custumer Service Excecutive",2),("Abhishek","Sales","Relationship Manager",4);
+                                -- insert into Employees_MCM(name,department,post,experience) values ("Fuji","Sales","Sales Excecutive",3),("Rahul","Sales","Custumer Service Excecutive",2),("Abhishek","Sales","Relationship Manager",4);
+                                -- update Employees_MCM set experience=7 where name="Fuji"; 
+                                
+                                -- select sum(department) from Employees_MCM where department="sales";
+                                -- select avg(post) from Employees_MCM limit 10; 
+                                
+                                -- create table customer(
+                                -- custmoer_id int primary key,
+                                -- department varchar(50),
+                                -- orders int,
+                                -- conatct_no int
+                                -- );
+                                -- alter table customer modify customer_id int auto_increment; 
+                                -- insert into customer(custmoer_id,department,orders,conatct_no) values (1,"McSaver Meal",44,749818114),(2,"Rahul Sahani",94,749818114),(3,"Abhishek",54,989786664);
+                                -- insert into customer(custmoer_id,department,orders,conatct_no) values (4,"McSaver Meal",44,749818114),(5,"Suraj Chaturvedi",23,749818114),(6,"Abhishek",56,989786664);
+                                -- insert into customer(custmoer_id,department,orders,conatct_no) values (7,"McSaver Meal",44,749818114),(8,"Rajni",10,749818114),(9,"Abhishek",95,989786664);
+                                -- insert into customer(custmoer_id,department,orders,conatct_no) values (10,"McSaver Meal",44,749818114),(11,"Priya",12,749818114),(12,"Abhishek",32,989786664);
+                                -- drop table Employees_MCM;
+                                -- select * from Employees_MCM;
+                                -- alter table Employees_MCM add new_emp_id int primary key auto_increment;
+                                -- alter table Employees_MCM drop constraint new_emp_id;
+                                
+                              
+                                
+                                                    </textarea> <br>
+                                <code>Assignment Given Aptech faculty: Mrs.Supriya Kulkarni</code>
+                            </div>
+                            <strong>Assignment III [inner join, outer join]</strong>
+                            <div>
+                                <textarea rows="20" cols="30" readonly style="text-align: left;">
+-- create table Customers(
+-- CustomerID int primary key,
+-- CustomerName varchar(255),
+-- Email varchar(255),
+-- Country varchar(255)
+-- );
+-- create table Orders(
+-- Order_id int primary key,
+-- CustomerID int,
+-- foreign key (CustomerID) references Customers(CustomerID),
+-- OrderDate date,
+-- TotalAmount decimal(10,2)
+-- );
+-- drop table Orders;
+-- alter table Orders modify Order_id int auto_increment ;
+-- select * from Customers;
+-- select * from Orders;
+-- insert into Orders(CustomerID,OrderDate,TotalAmount) values(1231,'2023-10-16',500);
+-- delete from Orders where Order_id = 2;
+-- insert into Customers values(1238,"Harry","Harry@example.com","Canada");
+-- insert into Customers values(1231,"Franklyn","franklyn12@example.com","USA"),(1232,"Goblin","Goblin4@example.com","Canada"),(1233,"Harper","Look90@example.com","Agentina"),(1234,"Hobs","HObs52@example.com","Afganistan"),(1235,"Luke","Lukelyn32@example.com","Netherland");
+-- select CustomerName,Email,Country,OrderDate from Customers inner join Orders on Orders.CustomerID = Customers.CustomerID;-- 1 Query
+-- select CustomerName,TotalAmount from Customers inner join Orders on Orders.CustomerID = Customers.CustomerID;-- 2 Query
+-- select * from Customers inner join Orders where CustomerName ;-- 3 Query;
+
+-- select * from customers as c inner join orders as o on c.customerID=o.customerID;-- 1 query
+-- select customerName, TotalAmount from customers as c inner join orders as o on c.customerID=o.customerID;-- 2 query
+-- select * from customers as c left outer join orders as o on c.customerID=o.customerID where o.customerID is null;
+--                 -- select * from customers as c inner join orders as o on c.customerID=o.customerID where orderDate = 2023;-- 
+-- select llllk from customers as c inner join orders as o where o.customerID= c.customerID;
+                                    
+                            </textarea>
+                            </div>
+                            <strong>Assignment IV [Basic, IN, (IN,IN,OUT), INOUT, performance_schema]</strong>
+                            <div>
+                                <details>
+                                    <summary>
+                                        Example
+                                    </summary>
+                                    <p>
+                                        <textarea rows="20" cols="30" readonly style="text-align: left;">
+                                        -- Basic
+                                        -- Delimiter &&
+                                        -- create procedure adddata()
+                                        -- begin 
+                                        --   set @A = 20;
+                                        --   set @B = 30;
+                                        --   select @A + @B;
+                                        -- end &&
+                                        -- call adddata();
+                                        
+                                        -- IN Method
+                                        -- Delimiter && 
+                                        -- create procedure add_data_in(in a int)
+                                        -- begin
+                                        -- 	 select * from department where department_id = a ;
+                                        -- end &&
+                                        -- call add_data_in(1);
+                                        
+                                        -- IN,IN,OUT Method
+                                        -- Delimiter &&
+                                        -- create procedure Add_Data_in_out(in A int,in B int,out ans int)
+                                        -- begin
+                                        -- 	set ans = A + B;
+                                        -- end &&
+                                        -- 1.call Add_Data_in_out(45,6,@ans);
+                                        -- select @ans;
+                                        
+                                        -- 2.set @A=87;
+                                        -- set @B=17;
+                                        -- call Add_Data_in_out(@A,@b,@ans);
+                                        
+                                        
+                                        -- INOUT Method
+                                        -- Delimiter &&
+                                        -- create procedure deptproc(inout ans int)
+                                        -- begin
+                                        -- 	select salary into ans from employeeS where employees_id = ans;
+                                        -- end &&
+                                        -- set @ans=206;
+                                        -- call deptproc(@ans);
+                                        -- select @ans;
+                                        
+                                        -- show variables like 'performance_schema';
+                                        -- select * from INFORMATION_SCHEMA.ENGINES where ENGINE = 'performance_schema';
+                                        -- use performance_schema;
+                                        -- show tables;
+                                        -- desc error_log;
+                                        -- select * from error_log;
+                                        -- SHOW ENGINES;
+                                        
+                                                                    </textarea>
+                                    </p>
+
+                                </details>
+                                <details>
+                                    <summary>
+                                        Assignment Based on Procedure
+                                    </summary>
+                                    <p>
+                                        <a href="assignments\procedure_assignment\sql_assignment.pdf">Download</a>
+                                    </p>
+                                </details>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" ng-class="{ active: selectedTab === 7 }">
+                       
+                        <article style="width: 450px; border: 2px solid greenyellow; border-radius: 10px; margin: 5px;" id="personal_project">
+                            <div>
+                                    <a href="https://group-project-zf6w.onrender.com/student/studentlogin"><img src="Images\group-project-pic.png" alt="Personal Project"></a>
+                                    <h3>Pleasant Click</h3>
+                            </div>
+
+                        </article>
+                    </div>
+            </center>
+        </article>
+    </section>
+    <footer>
+        <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">&copy; 2024 All Rights
+            Reserved</p>
+        <i style="color: white;">Made by <span style="color: violet">A</span><span style="color: mediumvioletred;">S</span><span style="color: orangered;">E</span><span style="color: green;">E</span><span style="color: yellow;">F</span>💙</i>
+    </footer>
+   
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=apiKEY&callback=getlocation"></script>
+</body>
+
+</html>
+

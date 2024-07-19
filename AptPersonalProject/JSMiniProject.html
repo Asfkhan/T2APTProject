@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AptechProject</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+</head>
+
+<body ng-app="MyApp" ng-controller="MyController">
+    <header>
+        <span><img src="/Images/aptechlogo.png" alt="no img" width="200px"></span>
+        <b>Python Web Development</b>
+      </header>
+    <section>
+        <nav>
+            <ul>
+                <li><button ng-click="selectTab(1)">Python</button></li>
+                <li><button ng-click="selectTab(2)">HTML</button></li>
+                <li><button ng-click="selectTab(3)">JavaScript</button></li>
+                <li><button ng-click="selectTab(4)">AngularJS</button></li>
+                <li><button ng-click="selectTab(5)">MYSql</button></li>
+                <li><button ng-click="selectTab(6)">Personal Project</button></li>
+            </ul>
+        </nav>
+        
+        <article>
+            <center>
+                <div class="tab-content" ng-class="{ active: selectedTab == 1 }">
+                    <center>
+                        <div id="pythontabs">
+                            <ul>
+                                <li><a class="pythonanchor" href="#UserDefinedFunction"><span
+                                            class="pythonSpanID">UserDefinedFunction</span></a></li>
+                                <li><a class="pythonanchor" href="#whileloop"><span class="pythonSpanID">whileloop</span></a>
+                                </li>
+                                <li><a class="pythonanchor" href="#forloop"><span class="pythonSpanID">forloop</span></a>
+                                </li>
+                                <li><a class="pythonanchor" href="#list"><span class="pythonSpanID">List</span></a></li>
+                                <li><a class="pythonanchor" href="#oops"><span class="pythonSpanID">OOPS</span></a></li>
+                                <li><a class="pythonanchor" href="#dictionary"><span class="pythonSpanID">Dictionary</span></a>
+                                </li>
+                                <li><a class="pythonanchor" href="#lambdafunction"><span
+                                            class="pythonSpanID">LambdaFuntion</span></a></li>
+        
+                            </ul>
+                            <div id="UserDefinedFunction">
+                                <p>
+                                    <a href="Function/functionNotes.pdf">View Assignment</a>
+                                </p>
+                                <h1>Calculator</h1><BR>
+                                <form>
+                                    <input type="number" ng-model="no1">
+                                    <input type="number" ng-model="no2">
+                                    <button type="button" ng-click="addkrdo()">ADD</button>
+                                    <button type="button" ng-click="subkrdo()">SUB</button>
+                                    <button type="button" ng-click="multikrdo()">MUL</button>
+                                    <button type="button" ng-click="divkrdo()">DIV</button>
+                                </form>
+                                <div>
+                                    <pre>{{calcresult}}</pre>
+                                </div>
+                                <button type="button" ng-click="age()"> Check ELigibility</button>
+                                <pre>{{eligibResult}}</pre>
+                            </div>
+                            <div id="whileloop">
+        
+                                <p>
+                                    <a href="WhileLoop/whileLoop.pdf">View Assignment</a>
+                                </p>
+                                <input type="number" ng-model="tableinput">
+                                <button type="button" ng-click="WLFTable()" id="tblebtn">Click Me To Get Table</button>
+                                <pre>{{tableResult}}</pre>
+                                <input type="number" ng-model="pspinput">
+                                <button type="button" ng-click="WLFPerfect()">Perfect Number</button>
+                                <button type="button" ng-click="WLFprime()">Prime Number</button>
+                                <button type="button" ng-click="WLFpalin()">Palin Number or Not</button>
+                                <button type="button" ng-click="WLFtwinprime()">Twin Prime Number or Not</button>
+                                <button type="button" ng-click="WLFreverse()">Reverse of Number</button>
+                                <button type="button" ng-click="WLFfactor()" id="facbtn">Factors</button>
+                                <button type="button" ng-click="WLFfactorial()">Factorial</button>
+                                <pre>{{pspoutput}}</pre>
+        
+        
+                            </div>
+                            <div id="forloop">
+                                <p>
+                                    <a href="ForLoop/forloopnotes.pdf">View Assignment</a>
+                                </p>
+                                <button type="button" ng-click="FLsna()">Click To Get Sum & Average Using For Loop</button>
+                                <pre>{{FLoutput}}</pre>
+                            </div>
+                            <div id="list">
+                                <p>
+                                    <a href="ListQuestion/listNotes.pdf">View Assignment</a>
+                                </p>
+                                <b>Q1. Create empty List append 5 number into list.</b>
+                                <input type="number" ng-model="list_user_input" placeholder="enter value">
+                                <button type="button" ng-click="list_q1_output_btn()">Add</button>
+                                <p>Output : {{list_q1_result | json}}</p>
+                                <b>Q2. Enter index number and element from user to insert number to the specified index in
+                                    the
+                                    list.</b>
+                                <input type="number" ng-model="list_user_x" placeholder="index number : ">
+                                <input type="number" ng-model="list_user_y" placeholder="element  : ">
+                                <button type="button" ng-click="list_q2_output_btn()">Show Output</button>
+                                <p>Output : {{list_q2_result}}</p>
+                                <b>Q3.Create another list of five numbers and append all the numbers from list 2 to list
+                                    one.</b>
+                                <button type="button" ng-click="list_q3_output_btn()">Create and Append</button>
+                                <p>Output : {{list_q3_result}}</p>
+                                <b>Q4. Display list with the step value two.</b>
+                                <button type="button" ng-click="list_q4_output_btn()">Show List </button>
+                                <p>Output : {{list_q4_result}}</p>
+                                <b>Q5. Display middle three element of list.</b>
+                                <button type="button" ng-click="list_q5_output_btn()">Show List </button>
+                                <p>Output : {{list_q5_result}}</p>
+                            </div>
+                            <div id="oops">
+                                <p>
+                                    <a href="Oops/oopsNotes.pdf">View Assignment</a>
+                                </p>
+                                <b>Q1. Create class furniture. using constructor initialize height, width
+                                    and color use display method display ().
+                                    Create another class chair which is inherited from furniture with the
+                                    attribute legs and use display method to display all attributes.</b>
+                                <button type="button" ng-click="oops_q1_output_btn()">Show Class Inheritance</button>
+                                <p>Output : {{oops_q1_result}}</p>
+                                <span ng-bind-html="oops_q1_result2"></span> <br> <br> <br> <br>
+                                <b>Q2. Create class rectangle, using constructor initialize length and
+                                    breadth find of rectangle using method.</b>
+                                <button type="button" ng-click="oops_q2_output_btn()">Show Class Inheritance</button>
+                                <span ng-bind-html="oops_q2_result"></span> <br> <br> <br> <br>
+                                <b>3.Create class circle, using constructor initialize radius and find
+                                    area and perimeter of circle.</b>
+                                <button type="button" ng-click="oops_q3_output_btn()">Show Class Inheritance</button>
+                                <span ng-bind-html="oops_q3_result"></span> <br> <br> <br> <br>
+                                <b>Q4. Create class the bank, using constructor take the values of account,
+                                    name and balance. Create method deposit (self, amt) with one parameter
+                                    amount to increase the balance, create another method withdraw (self,
+                                    amt) with one parameter to decrease the balance. Create method Statement
+                                    () to display all the attribute of class.</b>
+                                <button type="button" ng-click="oops_q4_output_btn()">Show Class Inheritance</button>
+                                <span ng-bind-html="oops_q4_result"></span> <br> <br> <br> <br>
+                            </div>
+                            <div id="dictionary">
+                                <p>
+                                    <a href="Dictionary/dictionaryNotes.pdf">View Assignment</a>
+                                </p>
+                            </div>
+                            <div id="lambdafunction">
+                                <p>
+                                    <a href="LambdaFunction/lambdaNotes.pdf">View Assignment</a>
+                                </p>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+                <div class="tab-content" ng-class="{ selectedTab == 2 }">
+                    <h2>Tab 2 Content</h2>
+                    <p>This is the content of Tab 2.</p>
+                </div>
+        
+                <div class="tab-content" ng-class="{ selectedTab == 3 }">
+                    <h2>Tab 3 Content</h2>
+                    <p>This is the content of Tab 3.</p>
+                </div>
+                </div>
+            </center>
+        </article>
+    </section>
+    <footer>
+        <p style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">&copy; 2024, All Rights Reserved</p>
+        <b>Copyright All Rights are Reserved.</b>
+    </footer>
+    <script src="/script.js" />
+</body>
+
+</html>
